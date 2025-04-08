@@ -1,0 +1,19 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app.kubernetes.io/instance: apr8-olddocsetup
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: apr8-olddocsetup
+  name: apr8-olddocsetup
+spec:
+  port:
+    targetPort: 8501
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: apr8-olddocsetup
+    weight: 100
+  wildcardPolicy: None

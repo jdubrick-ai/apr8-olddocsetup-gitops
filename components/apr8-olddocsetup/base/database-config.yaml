@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: apr8-olddocsetup-database-config
+data:
+  VECTORDB_HOST: "apr8-olddocsetup-database"
+  VECTORDB_PORT: ""
